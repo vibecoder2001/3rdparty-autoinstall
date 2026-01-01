@@ -1,12 +1,11 @@
 !include WinVer.nsh
 !include x64.nsh
-!include nsProcess.nsh
 !include LogicLib.nsh
 !include Sections.nsh
 !include StrFunc.nsh
 
 !define DRIVERNAME "3rdpartyautoinstall"
-!define VERSION "1.0"
+!define VERSION "1.0.1"
 
 !define INTEL_WLAN_LIST "PCI\VEN_8086&DEV_02F0&*;PCI\VEN_8086&DEV_06F0&*;PCI\VEN_8086&DEV_2526&*;PCI\VEN_8086&DEV_2723&*;PCI\VEN_8086&DEV_2725&*;PCI\VEN_8086&DEV_272B&*;PCI\VEN_8086&DEV_30DC&*;PCI\VEN_8086&DEV_31DC&*;PCI\VEN_8086&DEV_34F0&*;PCI\VEN_8086&DEV_3DF0&*;PCI\VEN_8086&DEV_43F0&*;PCI\VEN_8086&DEV_4DF0&*;PCI\VEN_8086&DEV_51F0&*;PCI\VEN_8086&DEV_51F1&*;PCI\VEN_8086&DEV_54F0&*;PCI\VEN_8086&DEV_7740&*;PCI\VEN_8086&DEV_7A70&*;PCI\VEN_8086&DEV_7AF0&*;PCI\VEN_8086&DEV_7E40&*;PCI\VEN_8086&DEV_7F70&*;PCI\VEN_8086&DEV_9DF0&*;PCI\VEN_8086&DEV_A0F0&*;PCI\VEN_8086&DEV_A370&*;PCI\VEN_8086&DEV_A840&*;PCI\VEN_8086&DEV_E340&*;PCI\VEN_8086&DEV_E440&*"
 !define MTK_WLAN_LIST "PCI\VEN_14C3&DEV_0616&*;PCI\VEN_14C3&DEV_0618&*;PCI\VEN_14C3&DEV_0619&*;PCI\VEN_14C3&DEV_0628&*;PCI\VEN_14C3&DEV_0629&*;PCI\VEN_14C3&DEV_062A&*;PCI\VEN_14C3&DEV_062B&*;PCI\VEN_14C3&DEV_0632&*;PCI\VEN_14C3&DEV_0633&*;PCI\VEN_14C3&DEV_0635&*"
@@ -23,8 +22,6 @@ SpaceTexts "none"
 
 InstallDir "$TEMP\${DRIVERNAME}"
 
-Var dpinst
-
 PageEx components
   ComponentText "Select which components you have. Autodetected components should be selected. Click install to start the installation." "" ""
 PageExEnd
@@ -34,19 +31,6 @@ Page instfiles
 Section
   SetOutPath $INSTDIR
   File /r "drivers"
-  StrCpy $dpinst "$INSTDIR\drivers\dpinst.exe"
-SectionEnd
-
-Section /o "Intel WiFi Drivers" IntelWLAN
-  ExecWait '"$dpinst" /sw /path "$INSTDIR\drivers\wifi\intel"'
-SectionEnd
-
-Section /o "Mediatek WiFi Drivers" MtkWLAN
-  ExecWait '"$dpinst" /sw /path "$INSTDIR\drivers\wifi\mtk"'
-SectionEnd
-
-Section /o "Realtek WiFi Drivers" RtkWLAN
-  ExecWait '"$dpinst" /sw /path "$INSTDIR\drivers\wifi\rtk"'
 SectionEnd
 
 !macro _GetExpandExe _OutVar
@@ -87,12 +71,25 @@ SectionEnd
   CreateDirectory "$0"
 !macroend
 
+Section /o "Intel WiFi Drivers" IntelWLAN
+  !insertmacro InstallInfsFromDir "$INSTDIR\drivers\wifi\intel"
+SectionEnd
+
+Section /o "Mediatek WiFi Drivers" MtkWLAN
+  !insertmacro InstallInfsFromDir "$INSTDIR\drivers\wifi\mtk"
+SectionEnd
+
+Section /o "Realtek WiFi Drivers" RtkWLAN
+  !insertmacro InstallInfsFromDir "$INSTDIR\drivers\wifi\rtk"
+SectionEnd
+
 Section /o "Intel CML Chipset Drivers" CmlChip
   !insertmacro PrepWorkDir "drv_cml"
 
   !insertmacro ExtractCab "chipset\cml\chipset.cab" "$0"
   !insertmacro ExtractCab "chipset\cml\lpss.cab"    "$0"
   !insertmacro ExtractCab "chipset\cml\dptf.cab"    "$0"
+  !insertmacro ExtractCab "chipset\heci.cab"    "$0"
 
   !insertmacro InstallInfsFromDir "$0"
   RMDir /r "$0"
@@ -105,6 +102,7 @@ Section /o "Intel JSL Chipset Drivers" JslChip
   !insertmacro ExtractCab "chipset\jsl\lpss.cab"            "$0"
   !insertmacro ExtractCab "chipset\jsl-tgl\dptf.cab"        "$0"
   !insertmacro ExtractCab "chipset\jsl-tgl-adl\gna.cab"     "$0"
+  !insertmacro ExtractCab "chipset\heci.cab"    "$0"
 
   !insertmacro InstallInfsFromDir "$0"
   RMDir /r "$0"
@@ -116,7 +114,8 @@ Section /o "Intel TGL Chipset Drivers" TglChip
   !insertmacro ExtractCab "chipset\tgl\chipset.cab"     "$0"
   !insertmacro ExtractCab "chipset\tgl\lpss.cab"        "$0"
   !insertmacro ExtractCab "chipset\jsl-tgl\dptf.cab"    "$0"
-  !insertmacro ExtractCab "chipset\tgl-adl\gna.cab"     "$0"
+  !insertmacro ExtractCab "chipset\jsl-tgl-adl\gna.cab"     "$0"
+  !insertmacro ExtractCab "chipset\heci.cab"    "$0"
 
   !insertmacro InstallInfsFromDir "$0"
   RMDir /r "$0"
@@ -128,7 +127,8 @@ Section /o "Intel ADL/RPL Chipset Drivers" AdlChip
   !insertmacro ExtractCab "chipset\adl-rpl\chipset.cab" "$0"
   !insertmacro ExtractCab "chipset\adl-rpl\lpss.cab"    "$0"
   !insertmacro ExtractCab "chipset\adl-rpl\ipf.cab"     "$0"
-  !insertmacro ExtractCab "chipset\tgl-adl\gna.cab"     "$0"
+  !insertmacro ExtractCab "chipset\jsl-tgl-adl\gna.cab"     "$0"
+  !insertmacro ExtractCab "chipset\heci.cab"    "$0"
 
   !insertmacro InstallInfsFromDir "$0"
   RMDir /r "$0"
@@ -140,7 +140,8 @@ Section /o "Intel ADL-N/TWL Chipset Drivers" AdlNChip
   !insertmacro ExtractCab "chipset\adl-rpl\chipset-n.cab" "$0"
   !insertmacro ExtractCab "chipset\adl-rpl\lpss-n.cab"    "$0"
   !insertmacro ExtractCab "chipset\adl-rpl\ipf.cab"       "$0"
-  !insertmacro ExtractCab "chipset\tgl-adl\gna.cab"       "$0"
+  !insertmacro ExtractCab "chipset\jsl-tgl-adl\gna.cab"       "$0"
+  !insertmacro ExtractCab "chipset\heci.cab"    "$0"
 
   !insertmacro InstallInfsFromDir "$0"
   RMDir /r "$0"
@@ -153,6 +154,7 @@ Section /o "Intel MTL Chipset Drivers" MtlChip
   !insertmacro ExtractCab "chipset\mtl\lpss.cab"    "$0"
   !insertmacro ExtractCab "chipset\mtl\ipf.cab"     "$0"
   !insertmacro ExtractCab "chipset\mtl\npu.cab"     "$0"
+  !insertmacro ExtractCab "chipset\heci.cab"    "$0"
 
   !insertmacro InstallInfsFromDir "$0"
   RMDir /r "$0"
