@@ -20,6 +20,12 @@ jobs:
         run: |
           choco install nsis -y
 
+      - name: Fetch and verify driver CABs
+        shell: powershell
+        run: |
+          Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
+          .\tools\fetch-cabs.ps1
+
       - name: Build with makensis
         shell: powershell
         run: |
