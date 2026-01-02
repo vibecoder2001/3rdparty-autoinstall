@@ -65,6 +65,6 @@
   },
   "chipset/mtl/npu.cab": {
     "url": "https://catalog.s.download.windowsupdate.com/c/msdownload/update/driver/drvs/2025/12/24d807d8-c13b-4c2e-bb1d-0e9aacc63291_c7b882baf644146582c0d3941fd5a125fdb22662.cab",
-    "sha256": "3a261b0e5f1d3c0dae4291ba3f255a313d230a3e585fb87abd5365096cdf3f6d"
+    "sha256": "0cf7e4296f03dd82c001dd5c2b929244be647de540b38815fa9dcfb9e276171a"
   }
 }
