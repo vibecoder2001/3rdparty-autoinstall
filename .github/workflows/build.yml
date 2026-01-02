@@ -23,7 +23,7 @@ jobs:
       - name: Build with makensis
         shell: powershell
         run: |
-          $nsi = "installer\3rdpartyautoinstall.nsi"
+          $nsi = "3rdpartyautoinstall.nsi"
           if (!(Test-Path $nsi)) { throw "NSIS script not found: $nsi" }
           & "${env:ProgramFiles(x86)}\NSIS\makensis.exe" /V4 $nsi
 
