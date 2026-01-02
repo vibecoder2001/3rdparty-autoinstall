@@ -1,4 +1,24 @@
 {
+  "wifi/intel.cab": {
+    "url": "https://catalog.s.download.windowsupdate.com/c/msdownload/update/driver/drvs/2025/12/4474014a-162c-4c7b-b31f-bb8497e35d3d_68ac74386ab4b3bd3230d1117c0a3ca9d05eec3e.cab",
+    "sha256": "43cbf99890a39717278e11155a029de34c89b328d147a7e162690a5a274525b6"
+  },
+  "wifi/mt7921.cab": {
+    "url": "https://catalog.s.download.windowsupdate.com/c/msdownload/update/driver/drvs/2025/09/d63e404e-a367-4596-8383-56fc4b2c5986_6e31978698a1f74b34baacacfdc9c0ce0e2dbaf2.cab",
+    "sha256": "228fb39fad32235be8fdc04e3db5f8df74c63c266e7ee8bf436ffcd32b2f60a3"
+  },
+  "wifi/mt7925.cab": {
+    "url": "https://catalog.s.download.windowsupdate.com/c/msdownload/update/driver/drvs/2025/11/8ac4c18c-802f-43c9-9056-48f4eb5ac84f_e298e16fe813f238ca17a8a2a01cd4880bc74cfd.cab",
+    "sha256": "7a49de2f2c91fb9e8ba63d46817fdeca2bb554deaedb54884ee6e25e6a83303e"
+  },
+  "wifi/rtwlane.cab": {
+    "url": "https://catalog.s.download.windowsupdate.com/c/msdownload/update/driver/drvs/2025/04/de87f4dc-1032-4a29-bc95-49c9f29bac5d_a996c0fde757dd0d9218b055bccb8e8a733d4007.cab",
+    "sha256": "f86640c7826da2633a4f9b98da53a05353966a3e0ebea6d7c63490bf0ea4fbd9"
+  },
+  "wifi/rtwlane6.cab": {
+    "url": "https://catalog.s.download.windowsupdate.com/d/msdownload/update/driver/drvs/2024/11/31eb49ab-f577-4dff-8b31-bae6d8667d56_e3d0817e2f8066d2cff07511d6380bc7199abd30.cab",
+    "sha256": "9f61882863a8582f2b1c5b57561f256c10823336cd171c0cc32c19504e025865"
+  },
   "chipset/heci.cab": {
     "url": "https://catalog.s.download.windowsupdate.com/d/msdownload/update/driver/drvs/2025/10/629f233a-0203-478b-b5e1-6a7bb6d82298_a3e2571285d780884d08c85b8337625c883e328a.cab",
     "sha256": "b24f3be399778e8e017e9e67e2c662e00d3a4b50e77eb351a313854ef2089065"

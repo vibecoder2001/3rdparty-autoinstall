@@ -72,15 +72,32 @@ SectionEnd
 !macroend
 
 Section /o "Intel WiFi Drivers" IntelWLAN
-  !insertmacro InstallInfsFromDir "$INSTDIR\drivers\wifi\intel"
+  !insertmacro PrepWorkDir "itl_wlan"
+
+  !insertmacro ExtractCab "wifi\intel.cab" "$0"
+
+  !insertmacro InstallInfsFromDir "$0"
+  RMDir /r "$0"
 SectionEnd
 
 Section /o "Mediatek WiFi Drivers" MtkWLAN
-  !insertmacro InstallInfsFromDir "$INSTDIR\drivers\wifi\mtk"
+  !insertmacro PrepWorkDir "mtk_wlan"
+
+  !insertmacro ExtractCab "wifi\mt7921.cab" "$0"
+  !insertmacro ExtractCab "wifi\mt7925.cab" "$0"
+
+  !insertmacro InstallInfsFromDir "$0"
+  RMDir /r "$0"
 SectionEnd
 
 Section /o "Realtek WiFi Drivers" RtkWLAN
-  !insertmacro InstallInfsFromDir "$INSTDIR\drivers\wifi\rtk"
+  !insertmacro PrepWorkDir "rtk_wlan"
+
+  !insertmacro ExtractCab "wifi\rtwlane.cab"  "$0"
+  !insertmacro ExtractCab "wifi\rtwlane6.cab" "$0"
+
+  !insertmacro InstallInfsFromDir "$0"
+  RMDir /r "$0"
 SectionEnd
 
 Section /o "Intel CML Chipset Drivers" CmlChip
