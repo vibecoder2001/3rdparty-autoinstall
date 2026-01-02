@@ -1,0 +1,37 @@
+name: Build installer
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install NSIS (Chocolatey)
+        shell: powershell
+        run: |
+          choco install nsis -y
+
+      - name: Build with makensis
+        shell: powershell
+        run: |
+          $nsi = "installer\3rdpartyautoinstall.nsi"
+          if (!(Test-Path $nsi)) { throw "NSIS script not found: $nsi" }
+          & "${env:ProgramFiles(x86)}\NSIS\makensis.exe" /V4 $nsi
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: 3rdpartyautoinstall-installer
+          path: |
+            installer\*.exe
+            *.exe
+          if-no-files-found: error
