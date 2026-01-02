@@ -66,5 +66,17 @@
   "chipset/mtl/npu.cab": {
     "url": "https://catalog.s.download.windowsupdate.com/c/msdownload/update/driver/drvs/2025/12/24d807d8-c13b-4c2e-bb1d-0e9aacc63291_c7b882baf644146582c0d3941fd5a125fdb22662.cab",
     "sha256": "0cf7e4296f03dd82c001dd5c2b929244be647de540b38815fa9dcfb9e276171a"
+  },
+  "sd/bayhubsd.cab": {
+    "url": "https://catalog.s.download.windowsupdate.com/c/msdownload/update/driver/drvs/2024/10/1d4eb406-a2c1-48bf-a663-f1272b3b7449_d76bb66be193b7d4e86f5a1bd2858e67fc5160ad.cab",
+    "sha256": "bf4e2b602df3fa79871534ad07d73d9fae310859f6d4d69a12a5023ebf178a12"
+  },
+  "sd/glpcisd.cab": {
+    "url": "https://catalog.s.download.windowsupdate.com/c/msdownload/update/driver/drvs/2025/12/eba10f77-1956-48b7-ab92-1a91cb40e368_67126387d35e59dc9297b3ddcb2cb246d6babde8.cab",
+    "sha256": "0027df5036271a1b27160131853e801341a6abb87443da2b9a5052c036fda5e4"
+  },
+  "sd/rtksd.cab": {
+    "url": "https://catalog.s.download.windowsupdate.com/c/msdownload/update/driver/drvs/2025/12/e469a1ce-4e7f-43af-9ac7-88b61ea17d48_559ac6d3b731199ea2a48bc086f977e9ee36f044.cab",
+    "sha256": "2136f797ca293c4c3abf459082d704be29c471b90428e1045f6ad07f1b745c79"
   }
 }
