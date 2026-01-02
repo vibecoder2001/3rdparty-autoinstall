@@ -1,26 +1,70 @@
 {
+  "chipset/heci.cab": {
+    "url": "https://catalog.s.download.windowsupdate.com/d/msdownload/update/driver/drvs/2025/10/629f233a-0203-478b-b5e1-6a7bb6d82298_a3e2571285d780884d08c85b8337625c883e328a.cab",
+    "sha256": "b24f3be399778e8e017e9e67e2c662e00d3a4b50e77eb351a313854ef2089065"
+  },
+  "chipset/cml/lpss.cab": {
+    "url": "https://catalog.s.download.windowsupdate.com/c/msdownload/update/driver/drvs/2021/11/6205d33d-a420-4dfc-9724-27999a3de111_ad6c425b1e3f5f70df82554d8300a80e1cca3921.cab",
+    "sha256": "8db4ec8b96d4bd46e666bedf040b61631f8901b946426fc4c34411993495650c"
+  },
   "chipset/cml/chipset.cab": {
     "url": "https://catalog.s.download.windowsupdate.com/d/msdownload/update/driver/drvs/2019/07/35853dc6-14f2-45e1-94f0-d2289e36d2f2_618696f00ecf5b12783ed6577f6ba18a9c6cb560.cab",
     "sha256": "d00e5ba16445371bb30794898746b9b7e1d5e7c16e4220368775a290102f9afb"
+  },
+  "chipset/cml-jsl-tgl/dptf.cab": {
+    "url": "https://catalog.s.download.windowsupdate.com/d/msdownload/update/driver/drvs/2022/07/0f500713-d36b-41e2-b9f0-85b56150532f_95f94116ea27c6994603bcce31eef0e314da9c16.cab",
+    "sha256": "c77fcd7f6f4fc4c68d7ef34ca045bb685ce9fa34565dda4228fd57f192d0c53d"
+  },
+  "chipset/jsl/lpss.cab": {
+    "url": "https://catalog.s.download.windowsupdate.com/d/msdownload/update/driver/drvs/2021/11/55c24871-140a-45f1-a1c2-40d466d71df3_6de29adb1d4df234bb10a4b875ec38cefe264641.cab",
+    "sha256": "b60b1158198b59772e50c0a1f908dc29fe02518ccb4ca6ac2b514732d76ba7df"
   },
   "chipset/jsl/chipset.cab": {
     "url": "https://catalog.s.download.windowsupdate.com/d/msdownload/update/driver/drvs/2021/11/24195e7c-f5e9-48f0-9df5-4362d4d23641_00e2dfeee8162ff1c69438a0d3b4e92033607d72.cab",
     "sha256": "db823712c49da0571c882f3101f5792a203a911710c46270c0157647ac1fd4bb"
   },
+  "chipset/tgl/lpss.cab": {
+    "url": "https://catalog.s.download.windowsupdate.com/d/msdownload/update/driver/drvs/2024/07/65185b93-d429-4697-b900-8b72472fab80_cd79e9da19f7050501e701f51f4246d9b6862ae8.cab",
+    "sha256": "ad428af0538d1870276f60169a0b4f634e4ac0effa96e0751a5b51b26dd40c2c"
+  },
   "chipset/tgl/chipset.cab": {
     "url": "https://catalog.s.download.windowsupdate.com/c/msdownload/update/driver/drvs/2021/07/99abf585-18e9-4f46-ac90-4510d48d2828_dea3cc1763220f7f71fba28a9a6a6fe6f05775ca.cab",
     "sha256": "86ec410474c8087d9d2c9c5082e64d7d0d0450526ba84259997516a4d6d5ea54"
+  },
+  "chipset/jsl-tgl-adl/gna.cab": {
+    "url": "https://catalog.s.download.windowsupdate.com/c/msdownload/update/driver/drvs/2025/12/7caa8745-52e1-44ba-9ae7-30de78deaebf_2b1bc5d1325001fcfac25ba6092187ae2aeb80bc.cab",
+    "sha256": "2830b55ce9313f28f763bb3bf2ca4a786fd675ce94da493c623b1c90cb0d402a"
+  },
+  "chipset/adl-rpl/lpss.cab": {
+    "url": "https://catalog.s.download.windowsupdate.com/d/msdownload/update/driver/drvs/2024/09/47849bb9-1389-4e3f-bea3-72702452a1bb_80adb2ab1a4de24d24be3d515ce8b9a65d8f06e8.cab",
+    "sha256": "abbcb2c1549444d20b01c6ab48ef73e1a339f6b015bbcc37a20f5e3ad2d0a7d4"
   },
   "chipset/adl-rpl/chipset.cab": {
     "url": "https://catalog.s.download.windowsupdate.com/c/msdownload/update/driver/drvs/2021/12/be4c97d3-f9d5-447b-81f3-edc826675887_633ce7865357186e59cd113fd9083203715ac64e.cab",
     "sha256": "b3ac97695f1526923214c20d0e520058982e5ad817ae1bc1facf0cb99a3658c9"
   },
+  "chipset/adl-rpl/lpss-n.cab": {
+    "url": "https://catalog.s.download.windowsupdate.com/c/msdownload/update/driver/drvs/2024/09/f830e3d7-f3ae-48c9-8e90-f60d2a02d98e_c3b3dc96668204ea78d9b8c98635dcfec2f20e7d.cab",
+    "sha256": "6a7ab5fb53d4fcb374e0ea7b378541631291810ca737dc9af164b5901d75bc42"
+  },
   "chipset/adl-rpl/chipset-n.cab": {
     "url": "https://catalog.s.download.windowsupdate.com/c/msdownload/update/driver/drvs/2022/09/203c7385-2d15-49db-8a5f-b0056fccc411_0f9a65ffbab916fbbf43015bd6af4395729cc08c.cab",
     "sha256": "fe36ae4a5aaad73b0011e6b2647846a262d14b869ba100ba67debbf52c22aaa0"
   },
+  "chipset/adl-rpl-mtl/ipf.cab": {
+    "url": "https://catalog.s.download.windowsupdate.com/d/msdownload/update/driver/drvs/2025/06/5d9559cc-426a-4d2a-b733-1842e5fa61cf_3db3ca5ed944266929fa5e0e4f3d88819bd41fd2.cab",
+    "sha256": "8dd279fe91594f819654fbab935d1b74f3db72af2938cad84e3ca7d44fde36de"
+  },
+  "chipset/mtl/lpss.cab": {
+    "url": "https://catalog.s.download.windowsupdate.com/c/msdownload/update/driver/drvs/2025/12/a4eb379e-388d-4e35-a3b7-46db4d39d7a2_dd0a2716d345dd00ea1ab0daca68eacda1dc7a4c.cab",
+    "sha256": "f77325ff80e84ecc665af3068ba05f9e362dfd591190308e323882b691d791f9"
+  },
   "chipset/mtl/chipset.cab": {
     "url": "https://catalog.s.download.windowsupdate.com/c/msdownload/update/driver/drvs/2023/11/6a4d726f-64a1-499a-a427-d27bcb8a8903_703c8676ef7602573d0976dd5561dd35494756ac.cab",
     "sha256": "64f6d17cac7ac4946c7b8ff7d6ea980dc430ba3454ea7bdb07f531c80e6c32d4"
+  },
+  "chipset/mtl/npu.cab": {
+    "url": "https://catalog.s.download.windowsupdate.com/c/msdownload/update/driver/drvs/2025/12/24d807d8-c13b-4c2e-bb1d-0e9aacc63291_c7b882baf644146582c0d3941fd5a125fdb22662.cab",
+    "sha256": "3a261b0e5f1d3c0dae4291ba3f255a313d230a3e585fb87abd5365096cdf3f6d"
   }
 }

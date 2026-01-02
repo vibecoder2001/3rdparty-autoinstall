@@ -88,7 +88,7 @@ Section /o "Intel CML Chipset Drivers" CmlChip
 
   !insertmacro ExtractCab "chipset\cml\chipset.cab" "$0"
   !insertmacro ExtractCab "chipset\cml\lpss.cab"    "$0"
-  !insertmacro ExtractCab "chipset\cml\dptf.cab"    "$0"
+  !insertmacro ExtractCab "chipset\cml-jsl-tgl\dptf.cab"    "$0"
   !insertmacro ExtractCab "chipset\heci.cab"    "$0"
 
   !insertmacro InstallInfsFromDir "$0"
@@ -100,7 +100,7 @@ Section /o "Intel JSL Chipset Drivers" JslChip
 
   !insertmacro ExtractCab "chipset\jsl\chipset.cab"         "$0"
   !insertmacro ExtractCab "chipset\jsl\lpss.cab"            "$0"
-  !insertmacro ExtractCab "chipset\jsl-tgl\dptf.cab"        "$0"
+  !insertmacro ExtractCab "chipset\cml-jsl-tgl\dptf.cab"        "$0"
   !insertmacro ExtractCab "chipset\jsl-tgl-adl\gna.cab"     "$0"
   !insertmacro ExtractCab "chipset\heci.cab"    "$0"
 
@@ -113,7 +113,7 @@ Section /o "Intel TGL Chipset Drivers" TglChip
 
   !insertmacro ExtractCab "chipset\tgl\chipset.cab"     "$0"
   !insertmacro ExtractCab "chipset\tgl\lpss.cab"        "$0"
-  !insertmacro ExtractCab "chipset\jsl-tgl\dptf.cab"    "$0"
+  !insertmacro ExtractCab "chipset\cml-jsl-tgl\dptf.cab"    "$0"
   !insertmacro ExtractCab "chipset\jsl-tgl-adl\gna.cab"     "$0"
   !insertmacro ExtractCab "chipset\heci.cab"    "$0"
 
@@ -126,7 +126,7 @@ Section /o "Intel ADL/RPL Chipset Drivers" AdlChip
 
   !insertmacro ExtractCab "chipset\adl-rpl\chipset.cab" "$0"
   !insertmacro ExtractCab "chipset\adl-rpl\lpss.cab"    "$0"
-  !insertmacro ExtractCab "chipset\adl-rpl\ipf.cab"     "$0"
+  !insertmacro ExtractCab "chipset\adl-rpl-mtl\ipf.cab"     "$0"
   !insertmacro ExtractCab "chipset\jsl-tgl-adl\gna.cab"     "$0"
   !insertmacro ExtractCab "chipset\heci.cab"    "$0"
 
@@ -139,7 +139,7 @@ Section /o "Intel ADL-N/TWL Chipset Drivers" AdlNChip
 
   !insertmacro ExtractCab "chipset\adl-rpl\chipset-n.cab" "$0"
   !insertmacro ExtractCab "chipset\adl-rpl\lpss-n.cab"    "$0"
-  !insertmacro ExtractCab "chipset\adl-rpl\ipf.cab"       "$0"
+  !insertmacro ExtractCab "chipset\adl-rpl-mtl\ipf.cab"       "$0"
   !insertmacro ExtractCab "chipset\jsl-tgl-adl\gna.cab"       "$0"
   !insertmacro ExtractCab "chipset\heci.cab"    "$0"
 
@@ -152,7 +152,7 @@ Section /o "Intel MTL Chipset Drivers" MtlChip
 
   !insertmacro ExtractCab "chipset\mtl\chipset.cab" "$0"
   !insertmacro ExtractCab "chipset\mtl\lpss.cab"    "$0"
-  !insertmacro ExtractCab "chipset\mtl\ipf.cab"     "$0"
+  !insertmacro ExtractCab "chipset\adl-rpl-mtl\ipf.cab"     "$0"
   !insertmacro ExtractCab "chipset\mtl\npu.cab"     "$0"
   !insertmacro ExtractCab "chipset\heci.cab"    "$0"
 
